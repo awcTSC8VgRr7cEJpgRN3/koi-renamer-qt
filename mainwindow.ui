@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>392</width>
+    <height>361</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>檔案改名</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox_Rules">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>12</y>
+      <width>370</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="title">
+     <string>指定改名邏輯</string>
+    </property>
+    <widget class="QTabWidget" name="tabWidget_Rules">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>16</y>
+       <width>370</width>
+       <height>105</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>4</number>
+     </property>
+     <widget class="QWidget" name="tab_Rename">
+      <attribute name="title">
+       <string>直接改名</string>
+      </attribute>
+      <widget class="QLineEdit" name="lineEdit_RenameTo">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>20</y>
+         <width>161</width>
+         <height>27</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>20</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>改名為：</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_OrdinalWithPrefix">
+      <attribute name="title">
+       <string>文字 + 序號</string>
+      </attribute>
+      <widget class="QLineEdit" name="lineEdit_Prefix">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>20</y>
+         <width>111</width>
+         <height>27</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>+</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkBox_Reverse">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>20</y>
+         <width>81</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>倒序</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_Ordinal">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>20</y>
+         <width>61</width>
+         <height>27</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="spinBox_Digits">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>20</y>
+         <width>16</width>
+         <height>24</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>50</y>
+         <width>321</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>拖曳時，游標所在檔案為第一序號，向下遞增或遞減至０。</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_Replace">
+      <attribute name="title">
+       <string>取代部分文字</string>
+      </attribute>
+      <widget class="QLineEdit" name="lineEdit_ReplaceFrom">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>30</y>
+         <width>131</width>
+         <height>27</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_ReplaceTo">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>30</y>
+         <width>131</width>
+         <height>27</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>10</y>
+         <width>21</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>將</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>10</y>
+         <width>51</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>取代為</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_InsDel">
+      <attribute name="title">
+       <string>插入刪除</string>
+      </attribute>
+      <widget class="QGroupBox" name="groupBox_Index">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>10</y>
+         <width>141</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QRadioButton" name="radioButton_Head">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>61</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>由開頭</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_Tail">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>40</y>
+          <width>61</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>由結尾</string>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="spinBox_Indexof">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>37</y>
+          <width>42</width>
+          <height>21</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_6">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>20</y>
+          <width>53</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>位置</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_InsDel">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>9</y>
+         <width>201</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QRadioButton" name="radioButton_Insert">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>61</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>插入</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_Delete">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>51</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>刪除</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_InsDelHint">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>7</y>
+          <width>71</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_Insert">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>27</y>
+          <width>91</width>
+          <height>27</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="spinBox_Delete">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>27</y>
+          <width>51</width>
+          <height>27</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_Locale">
+      <attribute name="title">
+       <string>字碼轉換</string>
+      </attribute>
+      <widget class="Line" name="line">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>10</y>
+         <width>3</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_LocaleHint">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>10</y>
+         <width>191</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>指定代碼頁：</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_Locale">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>40</y>
+         <width>191</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="currentText">
+        <string/>
+       </property>
+       <property name="currentIndex">
+        <number>-1</number>
+       </property>
+       <property name="placeholderText">
+        <string>請選擇區域編碼，或輸入編號</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>932 - 日文, Shift-JIS</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>936 - 簡體中文 (大陸、新加坡) </string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>949 - 韓文 (Unified Hangeul Code)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>950 - 繁體中文 (台灣、香港) </string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1252 - 英文、法德意荷葡萄西班牙</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>141</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QRadioButton" name="radioButton_ToUnicode">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>127</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Locale → Unicode</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_ToLocale">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>127</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Unicode → Locale</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_Run">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>148</y>
+      <width>370</width>
+      <height>63</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>執行</string>
+    </property>
+    <widget class="QPushButton" name="pushButton_RenameExtExcluded">
+     <property name="geometry">
+      <rect>
+       <x>16</x>
+       <y>24</y>
+       <width>81</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>改主檔名</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_RenameExtOnly">
+     <property name="geometry">
+      <rect>
+       <x>112</x>
+       <y>24</y>
+       <width>81</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>改副檔名</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_Test">
+     <property name="geometry">
+      <rect>
+       <x>216</x>
+       <y>20</y>
+       <width>141</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>測試，不實際更改檔名</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_RunThenClose">
+     <property name="geometry">
+      <rect>
+       <x>216</x>
+       <y>40</y>
+       <width>145</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>工作完畢後，結束程式</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser_TaskView">
+    <property name="geometry">
+     <rect>
+      <x>13</x>
+      <y>224</y>
+      <width>367</width>
+      <height>115</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>tabWidget_Rules</tabstop>
+  <tabstop>lineEdit_RenameTo</tabstop>
+  <tabstop>lineEdit_Prefix</tabstop>
+  <tabstop>lineEdit_Ordinal</tabstop>
+  <tabstop>spinBox_Digits</tabstop>
+  <tabstop>checkBox_Reverse</tabstop>
+  <tabstop>lineEdit_ReplaceFrom</tabstop>
+  <tabstop>lineEdit_ReplaceTo</tabstop>
+  <tabstop>radioButton_Insert</tabstop>
+  <tabstop>radioButton_Delete</tabstop>
+  <tabstop>lineEdit_Insert</tabstop>
+  <tabstop>spinBox_Delete</tabstop>
+  <tabstop>radioButton_Head</tabstop>
+  <tabstop>radioButton_Tail</tabstop>
+  <tabstop>spinBox_Indexof</tabstop>
+  <tabstop>radioButton_ToUnicode</tabstop>
+  <tabstop>radioButton_ToLocale</tabstop>
+  <tabstop>comboBox_Locale</tabstop>
+  <tabstop>pushButton_RenameExtExcluded</tabstop>
+  <tabstop>pushButton_RenameExtOnly</tabstop>
+  <tabstop>checkBox_Test</tabstop>
+  <tabstop>checkBox_RunThenClose</tabstop>
+  <tabstop>textBrowser_TaskView</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
