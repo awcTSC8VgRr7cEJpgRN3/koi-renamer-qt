@@ -2,7 +2,7 @@
 
 某有名檔案改名器的試作，再加上一些功能。
 
-![預𡳞圖](./images/explorer_2022-07-17_01-39-03.gif)
+![預𡳞圖](./images/bedfcd0077bc0573488a40cc0cea62a3cdad75876abb7b74875c77aa9d72e52b.gif)
 
 ## 功能
 
